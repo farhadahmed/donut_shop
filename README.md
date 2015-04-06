@@ -1,0 +1,1 @@
+Top Pot Donuts, with franchises all over town, needs your help calculating the number of donuts each location must bake every day. The number of donuts to bake depends on the hours of operation—7:00 AM to 6:00 PM—and a few factors unique to each location.
