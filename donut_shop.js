@@ -1,7 +1,6 @@
 (function() {
   window.stores = [];
   stores = window.stores;
-
   //DonutShop constructor
   //Number of hours open each day should be on the object
   var DonutShop = function(locationName, minHourlyCustomers, maxHourlyCustomers, avgDonutsPerCustomer) {
