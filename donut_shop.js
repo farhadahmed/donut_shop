@@ -1,14 +1,16 @@
 (function() {
+  window.stores = [];
+  stores = window.stores;
 
   //DonutShop constructor
   //Number of hours open each day should be on the object
-  var DonutShop = function(locationName, options) {
+  var DonutShop = function(locationName, minHourlyCustomers, maxHourlyCustomers, avgDonutsPerCustomer) {
     this.locationName = locationName;
-    this.minHourlyCustomers = options.minHourlyCustomers;
-    this.maxHourlyCustomers = options.maxHourlyCustomers;
-    this.avgDonutsPerCustomer = options.avgDonutsPerCustomer;
-    this.opens = options.opens || 700;
-    this.closes = options.closes || 1800;
+    this.minHourlyCustomers = minHourlyCustomers;
+    this.maxHourlyCustomers = maxHourlyCustomers;
+    this.avgDonutsPerCustomer = avgDonutsPerCustomer;
+    this.opens = 700;  //setting to military time simplifies setting this.hoursOpen
+    this.closes = 1800;
     this.hoursOpen = (this.closes - this.opens)/100;
     this.donutPerHour = [];
   };
@@ -18,9 +20,11 @@
     return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers)) + this.minHourlyCustomers;
   };
 
+  //Generate how many donuts the store needs to bake per hour depending on how many customers are coming in each hour
   DonutShop.prototype.donutsNeededPerHour = function() {
     return Math.floor(this.generateRandomHourlyCustomers() * this.avgDonutsPerCustomer);
   };
+
 
   DonutShop.prototype.donutsPerDay = function() {
     var total = 0;
@@ -32,31 +36,36 @@
     return total;
   };
 
-  var downtown = new DonutShop('Downtown', {minHourlyCustomers: 20, maxHourlyCustomers: 90, avgDonutsPerCustomer: 4.5});
-  var capitolHill = new DonutShop('Capitol Hill', {minHourlyCustomers: 15, maxHourlyCustomers: 70, avgDonutsPerCustomer: 1.5});
-  var bellevue = new DonutShop('Bellevue', {minHourlyCustomers: 2, maxHourlyCustomers: 15, avgDonutsPerCustomer: 6});
-  var redmond = new DonutShop('Redmond', {minHourlyCustomers: 1, maxHourlyCustomers: 22, avgDonutsPerCustomer: 3});
-  var tacoma = new DonutShop('Tacoma', {minHourlyCustomers: 0, maxHourlyCustomers: 10, avgDonutsPerCustomer: 1});
-
-
-  var list = document.getElementById('donutList');
-
   DonutShop.prototype.render = function() {
     var dailyTotal = this.donutsPerDay();
-    for (i = 0; i < this.donutPerHour.length; i++) {
-      var td = document.createElement('td');
-      td.innerHTML = this.donutPerHour[i];
-      var location = document.getElementById(this.locationName);
-      location.appendChild(td);
+    var elTr = document.createElement('tr');
+    var elTh = document.createElement('th');
+    var elDailyDonuts = document.createElement('td');
+    elTh.innerHTML = this.locationName;
+    elTr.appendChild(elTh);
+    for (i = 0; i < this.hoursOpen - 1; i++) {
+      var elHourly = document.createElement('td');
+      elHourly.innerHTML = this.donutPerHour[i];
+      elTr.appendChild(elHourly);
     };
-    td.innerHTML = dailyTotal;
-    location.appendChild(td);
+    elDailyDonuts.innerHTML = dailyTotal;
+    elTr.appendChild(elDailyDonuts);
+    return elTr;
   };
 
-  downtown.render();
-  capitolHill.render();
-  bellevue.render();
-  redmond.render();
-  tacoma.render();
+  window.renderStoreData = function() {
+    var elTable = document.getElementById('donut-stores');
+    stores.forEach(function(store) {
+      elTable.appendChild(store.render());
+    })
+  };
+
+  stores.push(new DonutShop('Downtown', 20, 91, 4.5));
+  stores.push(new DonutShop('Capitol Hill', 15, 70, 1.5));
+  stores.push(new DonutShop('Bellevue', 1, 22, 3));
+  stores.push(new DonutShop('Tacoma', 0, 10, 1));
+  window.renderStoreData();
+
+  window.DonutShop = DonutShop;
 
 })();

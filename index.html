@@ -4,40 +4,42 @@
   <title>Top Pot Donuts</title>
 </head>
 <body>
+  <main>
+    <form id="new-store-form">
 
-  <table>
-    <tr id="hours">
-      <th></th>
-        <td>7:00 AM</td>
-        <td>8:00 AM</td>
-        <td>9:00 AM</td>
-        <td>10:00 AM</td>
-        <td>11:00 AM</td>
-        <td>12:00 PM</td>
-        <td>1:00 PM</td>
-        <td>2:00 PM</td>
-        <td>3:00 PM</td>
-        <td>4:00 PM</td>
-        <td>5:00 PM</td>
-    </tr>
-    <tr id="Downtown">
-      <th>Downtown</th>
-    </tr>
-    <tr id="Capitol Hill">
-      <th>Capitol Hill</th>
-    </tr>
-    <tr id="Bellevue">
-      <th>Bellevue</th>
-    </tr>
-    <tr id="Redmond">
-      <th>Redmond</th>
-    </tr>
-    <tr id="Tacoma">
-      <th>Tacoma</th>
-    </tr>
-  </table>
+      <label for="locationName">Location:</label>
+      <input name="locationName" type="text">
+      <label for="minHourlyCustomers">Minimum Hourly Customers</label>
+      <input name="minHourlyCustomers" type="text">
+      <label for="maxHourlyCustomers">Maximum Hourly Customers</label>
+      <input name="maxHourlyCustomers" type="text">
+      <label for="avgDonutsPerCustomer">Average Donuts per Customer</label>
+      <input name="avgDonutsPerCustomer" type="text">
+
+      <button type="submit">Create new store</button>
+    </form>
+
+    <table id="donut-stores">
+      <tr id="hours">
+        <th></th>
+          <td>7:00 AM</td>
+          <td>8:00 AM</td>
+          <td>9:00 AM</td>
+          <td>10:00 AM</td>
+          <td>11:00 AM</td>
+          <td>12:00 PM</td>
+          <td>1:00 PM</td>
+          <td>2:00 PM</td>
+          <td>3:00 PM</td>
+          <td>4:00 PM</td>
+          <td>5:00 PM</td>
+      </tr>
+    </table>
+
+  </main>
 
   <script type="text/javascript" src="donut_shop.js"></script>
+  <script type="text/javascript" src="events.js"></script>
 
 </body>
 </html>
