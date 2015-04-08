@@ -1,15 +1,16 @@
 (function() {
   window.stores = [];
   stores = window.stores;
+
   //DonutShop constructor
   //Number of hours open each day should be on the object
-  var DonutShop = function(locationName, minHourlyCustomers, maxHourlyCustomers, avgDonutsPerCustomer, hoursOpen) {
+  var DonutShop = function(locationName, minHourlyCustomers, maxHourlyCustomers, avgDonutsPerCustomer) {
     this.locationName = locationName;
     this.minHourlyCustomers = minHourlyCustomers;
     this.maxHourlyCustomers = maxHourlyCustomers;
     this.avgDonutsPerCustomer = avgDonutsPerCustomer;
-    this.opens = opens || 700;  //setting to military time simplifies setting this.hoursOpen
-    this.closes = closes || 1800;
+    this.opens = 700;  //setting to military time simplifies setting this.hoursOpen
+    this.closes = 1800;
     this.hoursOpen = (this.closes - this.opens)/100;
     this.donutPerHour = [];
   };
@@ -38,14 +39,14 @@
     var elTr = document.createElement('tr');
     var elTh = document.createElement('th');
     var elDailyDonuts = document.createElement('td');
-    elTh.target.value = this.storeName;
+    elTh.innerHTML = this.locationName;
     elTr.appendChild(elTh);
-    for (i = 0; i < this.donutPerHour.length; i++) {
+    for (i = 0; i < this.hoursOpen - 1; i++) {
       var elHourly = document.createElement('td');
-      elHourly.target.value = this.donutPerHour[i];
+      elHourly.innerHTML = this.donutPerHour[i];
       elTr.appendChild(elHourly);
     };
-    elDailyDonuts.target.value = dailyTotal;
+    elDailyDonuts.innerHTML = dailyTotal;
     elTr.appendChild(elDailyDonuts);
     return elTr;
   };
@@ -56,7 +57,11 @@
       elTable.appendChild(store.render());
     })
   };
-  stores.push(new DonutShop('Downtown', 8, 4, 5));
+
+  stores.push(new DonutShop('Downtown', 20, 91, 4.5));
+  stores.push(new DonutShop('Capitol Hill', 15, 70, 1.5));
+  stores.push(new DonutShop('Bellevue', 1, 22, 3));
+  stores.push(new DonutShop('Tacoma', 0, 10, 1));
   window.renderStoreData();
 
   window.DonutShop = DonutShop;
