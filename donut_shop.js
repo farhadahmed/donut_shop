@@ -20,9 +20,11 @@
     return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers)) + this.minHourlyCustomers;
   };
 
+  //Generate how many donuts the store needs to bake per hour depending on how many customers are coming in each hour
   DonutShop.prototype.donutsNeededPerHour = function() {
     return Math.floor(this.generateRandomHourlyCustomers() * this.avgDonutsPerCustomer);
   };
+
 
   DonutShop.prototype.donutsPerDay = function() {
     var total = 0;
