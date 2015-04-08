@@ -63,7 +63,6 @@
   stores.push(new DonutShop('Bellevue', 1, 22, 3));
   stores.push(new DonutShop('Tacoma', 0, 10, 1));
   window.renderStoreData();
-  window.stores = [];
 
   window.DonutShop = DonutShop;
 

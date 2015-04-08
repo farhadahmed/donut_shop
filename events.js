@@ -2,16 +2,11 @@
   var DonutShop = window.DonutShop;
   var donutStoreList = document.getElementById('donut-stores');
   var storeForm = document.getElementById('new-store-form');
-  var storeData = [];
-
-  var handleStoreFormSubmit = function(event) { //prevents page from refreshing after buttonClick
-    event.preventDefault();
-  };
+  window.stores = [];
 
   storeForm.addEventListener('submit', function() {
     event.preventDefault();
     stores.push(new DonutShop(
-
       event.target.locationName.value,
       event.target.minHourlyCustomers.value,
       event.target.maxHourlyCustomers.value,
