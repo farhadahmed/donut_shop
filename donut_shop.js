@@ -1,6 +1,6 @@
 (function() {
   window.stores = [];
-  stores = window.stores;
+  stores = window.stores;  //Just so I don't have to keep writing window.stores
 
   //DonutShop constructor
   //Number of hours open each day should be on the object
