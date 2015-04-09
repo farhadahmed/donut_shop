@@ -1,12 +1,13 @@
 header {
   display: block;
-  padding-bottom: 8em;
+  padding-bottom: 2em;
   padding-left: 35em;
+  z-index: 1;
 }
 
 #top-pot-image {
-  height: 10em;
-  width: 10em;
+  height: 15em;
+  width: 15em;
   margin: auto;
   position: fixed;
 }
@@ -17,7 +18,7 @@ body {
 
 div {
   background-color: #CCA37A;
-  border-style: inset;
+  border-style: outset;
   margin-top: 2em;
   border-radius: 5em;
 }
@@ -33,15 +34,24 @@ div div {
 }
 
 #form-container {
-  width: 80em;
-  height: 8em;
+  width: 23em;
+  height: 18em;
   position: relative;
+  display: inline-block;
 }
 
 #table-container {
-  width: 60em;
+  width: 55em;
   margin: auto;
   margin-top: 2em;
+  display: inline-block;
+}
+
+#hours {
+  background-color: #cce0ea;
+}
+th {
+  background-color: #cce0ea;
 }
 
 h3 {
@@ -67,4 +77,21 @@ table {
 
 td {
   border: solid #564433;
+}
+
+#footer {
+  margin-top: 32em;
+}
+
+a {
+  color: #564433;
+}
+
+a:hover {
+  color: blue;
+}
+
+p {
+  text-align: center;
+  z-index: 3;
 }
