@@ -1,20 +1,62 @@
-div {
-  background-color: #CCA37A;
-  border-style: inset;
-  margin-top: 10em;
-  border-radius: 5em;
+header {
+  display: block;
+  padding-bottom: 2em;
+  padding-left: 35em;
+  z-index: 1;
 }
+
+#top-pot-image {
+  height: 15em;
+  width: 15em;
+  margin: auto;
+  position: fixed;
+}
+
 body {
   background-image: url("https://sickr.files.wordpress.com/2015/03/donuts.jpg");
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Lobster', Verdana, Arial;
+div {
+  background-color: #CCA37A;
+  border-style: outset;
+  margin-top: 2em;
+  border-radius: 5em;
 }
 
-p {
+#contain-all {
+  position: absolute;
+  width: 82em;
+  visibility: hidden;
+}
+
+div div {
+  visibility: visible;
+}
+
+#form-container {
+  width: 23em;
+  height: 18em;
+  position: relative;
+  display: inline-block;
+}
+
+#table-container {
+  width: 55em;
+  margin: auto;
+  margin-top: 2em;
+  display: inline-block;
+}
+
+#hours {
+  background-color: #cce0ea;
+}
+th {
+  background-color: #cce0ea;
+}
+
+h3 {
   text-align: center;
+  font-family: 'Lobster', Arial;
 }
 
 button:hover {
@@ -30,8 +72,26 @@ form {
 table {
   text-align: center;
   margin: auto;
+  padding-bottom: 2em;
 }
 
 td {
   border: solid #564433;
+}
+
+#footer {
+  margin-top: 32em;
+}
+
+a {
+  color: #564433;
+}
+
+a:hover {
+  color: blue;
+}
+
+p {
+  text-align: center;
+  z-index: 3;
 }

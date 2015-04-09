@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Top Pot Donuts</title>
+  <title>Top Pot Doughnuts</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+  <header>
+    <a href="http://www.toppotdoughnuts.com"><img id="top-pot-image" src="https://pbs.twimg.com/profile_images/437618776452759552/MnADNZ8h.jpeg"></a>
+  </header>
+
   <main>
-    <div>
-      <h1>Top Pot Donut!</h1>
-      <p><strong>Enter your location information below.</strong></p>
-      <form id="new-store-form">
+    <div id="contain-all">
 
-        <label for="locationName">Location:</label>
-        <input name="locationName" type="text">
-        <label for="minHourlyCustomers">Minimum Hourly Customers</label>
-        <input name="minHourlyCustomers" type="text">
-        <label for="maxHourlyCustomers">Maximum Hourly Customers</label>
-        <input name="maxHourlyCustomers" type="text">
-        <label for="avgDonutsPerCustomer">Average Donuts per Customer</label>
-        <input name="avgDonutsPerCustomer" type="text">
+      <div id="form-container">
 
-        <button type="submit">Create new store</button>
-      </form>
+        <h3>Enter your location information below.</h3>
 
-      <table id="donut-stores">
-        <tr id="hours">
-          <th></th>
-            <td>7:00 AM</td>
-            <td>8:00 AM</td>
-            <td>9:00 AM</td>
-            <td>10:00 AM</td>
-            <td>11:00 AM</td>
-            <td>12:00 PM</td>
-            <td>1:00 PM</td>
-            <td>2:00 PM</td>
-            <td>3:00 PM</td>
-            <td>4:00 PM</td>
-            <td>5:00 PM</td>
-        </tr>
-      </table>
+        <form id="new-store-form">
+          <label for="locationName">Location:</label>
+          <input name="locationName" type="text">
+          <p></p>
+          <label for="minHourlyCustomers">Minimum Hourly Customers</label>
+          <input name="minHourlyCustomers" type="text">
+          <p></p>
+          <label for="maxHourlyCustomers">Maximum Hourly Customers</label>
+          <input name="maxHourlyCustomers" type="text">
+          <p></p>
+          <label for="avgDonutsPerCustomer">Average Donuts per Customer</label>
+          <input name="avgDonutsPerCustomer" type="text">
+          <p></p>
+          <button type="submit">Create new store</button>
+        </form>
+
+      </div>
+
+      <div id="table-container">
+
+        <h3>Table Data</h3>
+        <table id="donut-stores">
+          <tr id="hours">
+            <th></th>
+              <td>7:00 AM</td>
+              <td>8:00 AM</td>
+              <td>9:00 AM</td>
+              <td>10:00 AM</td>
+              <td>11:00 AM</td>
+              <td>12:00 PM</td>
+              <td>1:00 PM</td>
+              <td>2:00 PM</td>
+              <td>3:00 PM</td>
+              <td>4:00 PM</td>
+              <td>5:00 PM</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </main>
+
+  <footer>
+    <div id="footer">
+      <p><a href="http://www.toppotdoughnuts.com/about-us.html">Our Story</a> | <a href="http://www.toppotdoughnuts.com/careers.html">Jobs</a> | <a href="http://www.toppotdoughnuts.com/cafe-info.html">Cafe Info</a></p>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="donut_shop.js"></script>
   <script type="text/javascript" src="events.js"></script>
