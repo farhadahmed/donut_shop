@@ -1,6 +1,8 @@
 div {
   background-color: #CCA37A;
   border-style: inset;
+  margin-top: 10em;
+  border-radius: 5em;
 }
 body {
   background-image: url("https://sickr.files.wordpress.com/2015/03/donuts.jpg");
