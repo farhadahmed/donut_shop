@@ -22,5 +22,6 @@
     event.target.minHourlyCustomers.value = null;
     event.target.maxHourlyCustomers.value = null;
     event.target.avgDonutsPerCustomer.value = null;
+    window.stores = [];
   });
 })();
