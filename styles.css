@@ -29,6 +29,14 @@ header {
 }
 
 
+.cube:hover {
+  transform: scale(0.8);
+}
+
+
+
+
+
 body {
   background-image: url("https://sickr.files.wordpress.com/2015/03/donuts.jpg");
   background-repeat: no-repeat;
