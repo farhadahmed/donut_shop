@@ -2,15 +2,33 @@ header {
   display: block;
   padding-bottom: 2em;
   padding-left: 35em;
-  z-index: 1;
+  z-index: 100;
 }
 
-#top-pot-image {
-  height: 15em;
-  width: 15em;
-  margin: auto;
+.cube {
   position: fixed;
+  border-radius: 1em;
+  background-color: white;
+  height: 17em;
+  width: 17em;
+
+  transform: translate(0%, 0%);
 }
+.side {
+  height: 10em;
+  position: absolute;
+  width: 10em;
+}
+.top {
+  transform: rotate(-45deg) skew(15deg, 15deg) translate(27%, 11%) scale(0.8);
+}
+.left {
+  transform: rotate(15deg) skew(15deg, 15deg) translate(-3%, 55%) scale(0.8);
+}
+.right {
+  transform: rotate(-15deg) skew(-15deg, -15deg) translate(79%, 93%) scale(0.8);
+}
+
 
 body {
   background-image: url("https://sickr.files.wordpress.com/2015/03/donuts.jpg");
