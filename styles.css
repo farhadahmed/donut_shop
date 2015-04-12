@@ -31,6 +31,8 @@ header {
 
 body {
   background-image: url("https://sickr.files.wordpress.com/2015/03/donuts.jpg");
+  background-repeat: no-repeat;
+  background-size: 100em 80em;
 }
 
 main {
