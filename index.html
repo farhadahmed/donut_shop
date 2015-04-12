@@ -8,16 +8,18 @@
 <body>
 
   <header>
-    <a href="http://www.toppotdoughnuts.com"><img id="top-pot-image" src="https://pbs.twimg.com/profile_images/437618776452759552/MnADNZ8h.jpeg"></a>
+    <div class="cube">
+      <img class="side top" src="https://pbs.twimg.com/profile_images/437618776452759552/MnADNZ8h.jpeg">
+      <img class="side left" src="https://pbs.twimg.com/profile_images/437618776452759552/MnADNZ8h.jpeg">
+      <img class="side right" src="https://pbs.twimg.com/profile_images/437618776452759552/MnADNZ8h.jpeg">
+    </div>
   </header>
 
   <main>
     <div id="contain-all">
 
       <div id="form-container">
-
         <h3>Enter your location information below.</h3>
-
         <form id="new-store-form">
           <label for="locationName">Location:</label>
           <input name="locationName" type="text">
@@ -33,11 +35,9 @@
           <p></p>
           <button type="submit">Create new store</button>
         </form>
-
       </div>
 
       <div id="table-container">
-
         <h3>Table Data</h3>
         <table id="donut-stores">
           <tr id="hours">
@@ -60,7 +60,7 @@
   </main>
 
   <footer>
-    <div id="footer">
+    <div>
       <p><a href="http://www.toppotdoughnuts.com/about-us.html">Our Story</a> | <a href="http://www.toppotdoughnuts.com/careers.html">Jobs</a> | <a href="http://www.toppotdoughnuts.com/cafe-info.html">Cafe Info</a></p>
     </div>
   </footer>
