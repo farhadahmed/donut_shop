@@ -11,8 +11,7 @@ header {
   background-color: white;
   height: 17em;
   width: 17em;
-
-  transform: translate(0%, 0%);
+  display: inline-block;
 }
 .side {
   height: 10em;
@@ -34,6 +33,10 @@ body {
   background-image: url("https://sickr.files.wordpress.com/2015/03/donuts.jpg");
 }
 
+main {
+  margin-top: 3em;
+}
+
 div {
   background-color: #CCA37A;
   border-style: outset;
@@ -52,7 +55,7 @@ div div {
 }
 
 #form-container {
-  width: 23em;
+  width: 22em;
   height: 18em;
   position: relative;
   display: inline-block;
@@ -98,7 +101,7 @@ td {
 }
 
 footer {
-  margin-top: 32em;
+  margin-top: 34em;
 }
 
 a {
